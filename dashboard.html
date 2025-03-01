@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Dashboard</title>
+
+    <!-- DaisyUI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex justify-around items-center ">
+                <img class="w-16" src="assets/Group.png" alt="">
+                <div>
+                    <h1  class="text-3xl font-bold">$ <span id="balance">4500</span></h1>
+                    <p>Available Balance</p>
+                </div>
+                <button class="btn ">logout</button>
+            </nav>
+        </header>
+        <section class="m-5">
+            <h1 class="text-2xl font-bold ">Welcome to Payoo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <div class="cards grid grid-cols-3 gap-4 mt-4">
+                <div id="add-money-box" class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Add Money</h3>
+                </div>
+                <div id="cash-out-box" class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Cash Out</h3>
+                </div>
+                <div class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3 class="text-sm">Transfer Money</h3>
+                </div>
+                <div class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Get Bonus</h3>
+                </div>
+                <div class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Pay Bill</h3>
+                </div>
+                <div id="transection-box" class="box border border-slate-500 rounded p-4 text-center ">
+                    <img class="w-10 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Transections</h3>
+                </div>
+            </div>
+        </section>
+        <!-- add money section  -->
+        <section id="add-money">
+            <h1 class="text-2xl text-center font-bold ">Add Money</h1>
+            <div class="">
+                <div class="hero-content ">
+                    <div class="card bg-base-100 w-full shadow-2xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                    <legend class="fieldset-legend">Select a bank</legend>
+                                    <select id="bank-name" class="select" required>
+                                        <option disabled selected>Select a bank </option>
+                                        <option>Bkash</option>
+                                        <option>Nagad</option>
+                                        <option>Rocket</option>
+                                    </select>
+                                <label class="fieldset-label">Bank Account Number</label>
+                                <input id="account-number" type="number" class="input" placeholder="Account Number"
+                                    required />
+                                <label class="fieldset-label">Amount</label>
+                                <input id="amount-number" type="number" class="input" placeholder="Account Number"
+                                    required />
+                                <label class="fieldset-label">Password</label>
+                                <input id="pin-number" type="text" class="input" placeholder="Password" required />
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <button id="btn-add-money" class=" btn mt-4">Add Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cash out section  -->
+        <section id="cash-out">
+            <h1 class="text-2xl text-center font-bold ">Cash Out</h1>
+            <div class="">
+                <div class="hero-content ">
+                    <div class="card bg-base-100 w-full shadow-2xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                    
+                                <label class="fieldset-label">Agent Number</label>
+                                <input id="agent-number" type="number" class="input" placeholder="Agent Number"
+                                    required />
+                                <label class="fieldset-label">Amount</label>
+                                <input id="cash-out-amount" type="number" class="input" placeholder="Amout"
+                                    required />
+                                <label class="fieldset-label">Password</label>
+                                <input id="co-pin-number" type="text" class="input" placeholder="Password" required />
+                                <button id="btn-cash-out" class=" btn mt-4">Cash Out</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- transection section  -->
+        <section id="transection">
+            <h1 class="text-2xl text-center font-bold ">Transections</h1>
+            <div id="transection-cont" class="transection-list ">
+                
+                
+            </div>
+        </section>
+    </section>
+    <script src="utiities/utilities.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/addMoney.js"></script>
+    <script src="script/cashOut.js"></script>
+
+</body>
+
+</html>
