@@ -31,3 +31,7 @@ function makeTransection(amount, balance, event) {
     `;
     document.getElementById('transection-cont').prepend(tran);
 }
+
+function logout() {
+    window.location.href = 'index.html';
+}
